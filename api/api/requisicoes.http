@@ -1,0 +1,38 @@
+### PRODUTOS
+
+# Listar produtos
+GET http://localhost:5281/produtos/listar
+Accept: application/json
+
+###
+
+# Cadastrar produto
+POST http://localhost:5281/produtos/cadastrar
+Content-Type: application/json
+
+{
+  "nome": "Produto Teste4",
+  "descricao": "Descrição do Produto Teste4",
+  "tamanho": "M",
+  "tecido": "Couro",
+  "valor": 129.90
+}
+
+###
+
+# Alterar produto
+PUT http://localhost:5281/produtos/alterar/ecc5088c-a3a9-4acf-8b5a-203ebf8bb064
+Content-Type: application/json
+
+{
+  "nome": "Produto Alterado 4",
+  "descricao": "Descrição Alterada 4",
+  "tamanho": "G",
+  "tecido": "Poliéster",
+  "valor": 79.99
+}
+
+###
+
+# Deletar produto
+DELETE http://localhost:5281/produtos/deletar/feec9b9a-1411-4aab-81b0-3386ba875369
