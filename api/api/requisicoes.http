@@ -1,38 +1,50 @@
-### PRODUTOS
-
-# Listar produtos
-GET http://localhost:5281/produtos/listar
-Accept: application/json
+# Listar todos IMC
+GET http://localhost:5204/api/imc/listar
 
 ###
 
-# Cadastrar produto
-POST http://localhost:5281/produtos/cadastrar
+# Listar IMC por Aluno
+GET http://localhost:5204/api/imc/listarporaluno/1
+
+
+
+###
+
+# Criar IMC
+POST http://localhost:5204/api/imc/cadastrar
 Content-Type: application/json
 
 {
-  "nome": "Produto Teste4",
-  "descricao": "Descrição do Produto Teste4",
-  "tamanho": "M",
-  "tecido": "Couro",
-  "valor": 129.90
+  "alunoId": 1,
+  "valor": 22.86
 }
 
 ###
 
-# Alterar produto
-PUT http://localhost:5281/produtos/alterar/ecc5088c-a3a9-4acf-8b5a-203ebf8bb064
+# Atualizar IMC
+PUT http://localhost:5204/api/imc/alterar/1
 Content-Type: application/json
 
 {
-  "nome": "Produto Alterado 4",
-  "descricao": "Descrição Alterada 4",
-  "tamanho": "G",
-  "tecido": "Poliéster",
-  "valor": 79.99
+  "valor": 23.50
 }
 
 ###
 
-# Deletar produto
-DELETE http://localhost:5281/produtos/deletar/feec9b9a-1411-4aab-81b0-3386ba875369
+# Cadastrar Aluno
+POST http://localhost:5204/api/aluno/cadastrar
+Content-Type: application/json
+
+{
+  "nome": "John Doe",
+  "altura": 1.75,
+  "peso": 70
+}
+
+###
+
+
+
+
+
+
